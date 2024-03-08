@@ -1,43 +1,43 @@
-import Accordion        from "./components/accordion/Accordion.jsx";
+import Accordion from "./components/accordion/Accordion.jsx";
 import {AccordionTitle} from "./components/accordion/AccordionTitle.jsx";
 import {SearchableList} from "./components/SearchableList/SearchableList.jsx";
-import savannaImg from './assets/african-savanna.jpg';
-import amazonImg from './assets/amazon-river.jpg';
-import caribbeanImg from './assets/caribbean-beach.jpg';
-import desertImg from './assets/desert-dunes.jpg';
-import forestImg from './assets/forest-waterfall.jpg';
-import Place     from "./Place.jsx";
+import savannaImg from "./assets/african-savanna.jpg";
+import amazonImg from "./assets/amazon-river.jpg";
+import caribbeanImg from "./assets/caribbean-beach.jpg";
+import desertImg from "./assets/desert-dunes.jpg";
+import forestImg from "./assets/forest-waterfall.jpg";
+import Place from "./Place.jsx";
 
 const PLACES = [
   {
-    id: 'african-savanna',
+    id: "african-savanna",
     image: savannaImg,
-    title: 'African Savanna',
-    description: 'Experience the beauty of nature.',
+    title: "African Savanna",
+    description: "Experience the beauty of nature.",
   },
   {
-    id: 'amazon-river',
+    id: "amazon-river",
     image: amazonImg,
-    title: 'Amazon River',
-    description: 'Get to know the largest river in the world.',
+    title: "Amazon River",
+    description: "Get to know the largest river in the world.",
   },
   {
-    id: 'caribbean-beach',
+    id: "caribbean-beach",
     image: caribbeanImg,
-    title: 'Caribbean Beach',
-    description: 'Enjoy the sun and the beach.',
+    title: "Caribbean Beach",
+    description: "Enjoy the sun and the beach.",
   },
   {
-    id: 'desert-dunes',
+    id: "desert-dunes",
     image: desertImg,
-    title: 'Desert Dunes',
-    description: 'Discover the desert life.',
+    title: "Desert Dunes",
+    description: "Discover the desert life.",
   },
   {
-    id: 'forest-waterfall',
+    id: "forest-waterfall",
     image: forestImg,
-    title: 'Forest Waterfall',
-    description: 'Listen to the sound of the water.',
+    title: "Forest Waterfall",
+    description: "Listen to the sound of the water.",
   },
 ];
 
@@ -51,14 +51,10 @@ function App() {
             id={"experience"}
             className={"accordion-item"}
           >
-            <Accordion.Title
-              className={"accordion-item-title"}
-            >
+            <Accordion.Title className={"accordion-item-title"}>
               We got 20 years of
             </Accordion.Title>
-            <Accordion.Content
-              className={"accordion-item-content"}
-            >
+            <Accordion.Content className={"accordion-item-content"}>
               <article>
                 <p>You can&apos;t go wrong with us</p>
                 <p>
@@ -73,14 +69,10 @@ function App() {
             id={"local-guides"}
             className={"accordion-item"}
           >
-            <Accordion.Title
-              className={"accordion-item-title"}
-            >
+            <Accordion.Title className={"accordion-item-title"}>
               We're working with local guides
             </Accordion.Title>
-            <Accordion.Content
-              className={"accordion-item-content"}
-            >
+            <Accordion.Content className={"accordion-item-content"}>
               <article>
                 <p>We are not doing this alone from out office</p>
                 <p>
@@ -89,20 +81,23 @@ function App() {
                 </p>
               </article>
             </Accordion.Content>
-          
           </Accordion.Item>
         </Accordion>
       </section>
-      
       <section>
-        <SearchableList items={PLACES} itemKeyFn={item => item.id}>
+        <SearchableList
+          items={PLACES}
+          itemKeyFn={(item) => item.id}
+        >
           {(item) => <Place item={item}/>}
         </SearchableList>
-        <SearchableList items={['item 1', 'item 2']} itemKeyFn={item => item}>
-          {item => item}
+        <SearchableList
+          items={["item 1", "item 2"]}
+          itemKeyFn={(item) => item}
+        >
+          {(item) => item}
         </SearchableList>
       </section>
-    
     </main>
   );
 }

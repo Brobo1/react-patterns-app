@@ -1,16 +1,14 @@
 import {
-  useRef,
-  useState
+  useRef, useState
 } from "react";
 
 export function SearchableList({items, itemKeyFn, children}) {
-  const lastChange                  = useRef(null);
+  const lastChange = useRef(null);
   const [searchTerm, setSearchTerm] = useState('');
   
-  const searchResults = items.filter(item =>
-    JSON.stringify(item)
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase()));
+  const searchResults = items.filter(item => JSON.stringify(item)
+    .toLowerCase()
+    .includes(searchTerm.toLowerCase()));
   
   function handleChange(event) {
     if (lastChange.current) {

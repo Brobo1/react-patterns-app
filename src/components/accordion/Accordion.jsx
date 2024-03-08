@@ -1,8 +1,6 @@
 import {
-  createContext,
-  useContext,
-  useState
-}                      from "react";
+  createContext, useContext, useState
+} from "react";
 import {AccordionItem} from "./AccordionItem.jsx";
 import {AccordionContent} from "./AccordionContent.jsx";
 import {AccordionTitle} from "./AccordionTitle.jsx";
@@ -33,8 +31,7 @@ export function Accordion({children, className}) {
   }
   
   const contextValue = {
-    openItemId,
-    toggleItem,
+    openItemId, toggleItem,
   }
   
   return (

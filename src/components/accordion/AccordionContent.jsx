@@ -4,12 +4,13 @@ import {useAccordionItemContext} from "./AccordionItem.jsx";
 export function AccordionContent({className, children}) {
   const {openItemId} = useAccordionContext();
   const id = useAccordionItemContext();
-  const isOpen       = openItemId === id;
+  const isOpen = openItemId === id;
   
   return (
     <div
-      className={isOpen ? `${className ?? ''} open` :
-                 `${className ?? ''} close`}
+      className={isOpen ?
+        `${className ?? ''} open` :
+        `${className ?? ''} close`}
     >
       {children}
     </div>

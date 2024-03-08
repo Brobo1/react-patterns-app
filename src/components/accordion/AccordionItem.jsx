@@ -1,10 +1,8 @@
 import {
-  createContext,
-  useContext
+  createContext, useContext
 } from "react";
 
 const AccordionItemContext = createContext();
-
 
 export function useAccordionItemContext() {
   const ctx = useContext(AccordionItemContext)
