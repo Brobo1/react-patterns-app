@@ -3,6 +3,7 @@ import {
   useContext,
   useState
 } from "react";
+import {AccordionItem} from "./AccordionItem.jsx";
 
 const AccordionContext = createContext();
 
@@ -39,9 +40,10 @@ export default function Accordion({children, className}) {
       value={contextValue}
       className={className}
     >
-      <ul className={className}>
-        {children}
-      </ul>
+      <ul className={className}>{children}</ul>
     </AccordionContext.Provider>
   )
 }
+
+
+Accordion.Item = AccordionItem
