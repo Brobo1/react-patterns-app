@@ -9,7 +9,6 @@ export function useAccordionItemContext() {
     throw new Error('AccordionItem related component must be wrapped by <Accordion.Item>.')
   }
   return ctx;
-  
 }
 
 export function AccordionItem({id, className, children}) {

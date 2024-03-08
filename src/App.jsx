@@ -1,5 +1,4 @@
 import Accordion from "./components/accordion/Accordion.jsx";
-import {AccordionTitle} from "./components/accordion/AccordionTitle.jsx";
 import {SearchableList} from "./components/SearchableList/SearchableList.jsx";
 import savannaImg from "./assets/african-savanna.jpg";
 import amazonImg from "./assets/amazon-river.jpg";
