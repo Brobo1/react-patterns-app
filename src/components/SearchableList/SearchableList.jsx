@@ -1,6 +1,4 @@
-import {
-  useRef, useState
-} from "react";
+import {useRef, useState} from "react";
 
 export function SearchableList({items, itemKeyFn, children}) {
   const lastChange = useRef(null);

@@ -1,6 +1,4 @@
-import {
-  createContext, useContext, useState
-} from "react";
+import {createContext, useContext, useState} from "react";
 import {AccordionItem} from "./AccordionItem.jsx";
 import {AccordionContent} from "./AccordionContent.jsx";
 import {AccordionTitle} from "./AccordionTitle.jsx";
